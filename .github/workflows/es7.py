@@ -65,10 +65,10 @@ while quantity > 0:
                 break
             alg = [3, 7, 15, 31, 63]
             while True:
-                check = quantity - r.choice(alg)
-                if check > 0:
+                check = r.choice(alg)
+                if check <= quantity / 2:
                     break
-            compick = check
+            compick = quantity - check
             quantity = quantity - compick    
             print(f'Il computer ha preso {compick} biglie, ora ne rimangono {quantity}')            
             input('Premi invio per iniziare il turno')
@@ -105,10 +105,10 @@ while quantity > 0:
                 break
             alg = [3, 7, 15, 31, 63]
             while True:
-                check = quantity - r.choice(alg)
-                if check > 0:
+                check = r.choice(alg)
+                if check <= quantity / 2:
                     break
-            compick = check
+            compick = quantity - check
             quantity = quantity - compick    
             print(f'Il computer ha preso {compick} biglie, ora ne rimangono {quantity}')            
             input('Premi invio per iniziare il turno')
@@ -125,4 +125,4 @@ while quantity > 0:
                     print('Usa un altro numero compreso tra 1 e la metà di biglie rimaste')
             quantity = quantity - playerpick
             input(f'Sono rimaste {quantity} biglie. Premi invio per passare il turno')  
-
+           
